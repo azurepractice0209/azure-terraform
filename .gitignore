@@ -1,0 +1,18 @@
+# Terraform cache and state
+.terraform/
+*.tfstate
+*.tfstate.backup
+.terraform.lock.hcl
+
+# Terraform plan files
+myplan
+*.tfplan
+
+# Sensitive files
+crash.log
+*.pem
+*.key
+*.crt
+
+# IDE files
+.vscode/
