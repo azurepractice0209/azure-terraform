@@ -4,15 +4,12 @@
 *.tfstate.backup
 .terraform.lock.hcl
 
-# Terraform plan files
-myplan
+# Terraform plan output
 *.tfplan
+myplan
 
 # Sensitive files
 crash.log
 *.pem
 *.key
 *.crt
-
-# IDE files
-.vscode/
