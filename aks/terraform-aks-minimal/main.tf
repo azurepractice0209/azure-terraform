@@ -12,4 +12,4 @@ module "aks" {
   node_count          = var.node_count
   vm_size             = var.vm_size
   dns_prefix          = "devops"
-}
+  }
