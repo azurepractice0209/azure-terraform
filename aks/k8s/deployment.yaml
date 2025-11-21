@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: simple-angular-app
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: simple-angular-app
+  template:
+    metadata:
+      labels:
+        app: simple-angular-app
+    spec:
+      containers:
+        - name: simple-angular-app
+          image: azurepractice0209/simple-angular-app:latest
+          ports:
+            - containerPort: 80
