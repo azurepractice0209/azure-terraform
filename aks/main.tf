@@ -9,10 +9,14 @@ resource "azurerm_kubernetes_cluster" "aks" {
   resource_group_name = azurerm_resource_group.rg.name
   dns_prefix          = "devopstesting"
 
+  kubernetes_version = "1.33.5"
+
   default_node_pool {
-    name       = "system"
-    node_count = 1
-    vm_size    = "Standard_B2s"    # minimal VM for testing
+    name                 = "system"
+    node_count           = 1
+    vm_size              = "Standard_B2ms"
+    orchestrator_version = "1.33.5"
+    temporary_name_for_rotation = "tempnp"
   }
 
   identity {
